@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h1>Calculator:Beautiful Tables</h1>
+  {% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+  {% endif %}
+  <form method=post>
+    <dl>
+      <dt>Enter the first number:
+      <dd><label>
+          <input type=number name=firstNum value="{{
+              request.form.firstNum }}">
+      </label>
+        <dt>Enter the second number:
+      <dd><label>
+          <input type=number name=secondNum value="{{
+              request.form.secondNum }}">
+      </label>
+    </dl>
+    <p><input type=submit value="Do Subtract">
+  </form>
+<a href="/history">Find the History</a>
+{% endblock %}

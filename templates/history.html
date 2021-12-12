@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>Calculation History:Beautiful Table</h1>
+<table class="table table-striped">
+    <tr>
+        <th scope="col">First Number</th>
+        <th scope="col">Second Number</th>
+        <th scope="col">Operation</th>
+        <th scope="col">Result</th>
+    </tr>
+    {% for h in his %}
+    <tr>
+        <td>{{h.first_num}}</td>
+        <td>{{h.second_num}}</td>
+        <td>{{h.operation}}</td>
+        <td>{{h.result}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
